@@ -19,6 +19,11 @@ variable "app_origin" {
   default = "http://localhost:5173"
 }
 
+variable "mode" {
+  type    = string
+  default = "development"
+}
+
 module "auth0" {
   source                    = "../../modules/auth0"
   auth0_callback            = var.app_origin
@@ -28,6 +33,8 @@ module "auth0" {
   auth0_web_origin          = var.app_origin
 }
 
-output "VITE_AUTH0_CLIENT_ID" {
-  value = module.auth0.auth0_app_client_id
+module "update_environment" {
+  source              = "../../modules/update_env"
+  mode                = var.mode
+  auth0_app_client_id = module.auth0.auth0_app_client_id
 }

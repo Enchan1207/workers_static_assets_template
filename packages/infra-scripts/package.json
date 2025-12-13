@@ -1,0 +1,8 @@
+{
+    "name": "infra-scripts",
+    "type": "module",
+    "dependencies": {
+        "commander": "^14.0.2",
+        "zod": "^4.1.13"
+    }
+}
