@@ -46,12 +46,7 @@ React SPA × Hono API backend on Cloudflare Workers and static assets
    terraform -chdir=infra/env/<env> apply
    ```
 
-   このコマンドにより、環境変数に追加で設定すべき値がoutputとして提供されます。
-   以下のコマンドの出力を、各環境の `.env.<env>` に貼り付けてください。
-
-   ```sh
-   terraform -chdir=infra/env/<env> output
-   ```
+   このコマンドにより `.env.<env>` の内容が更新されます。
 
 3. アプリケーションのデプロイ
 
