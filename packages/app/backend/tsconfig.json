@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.backend.tsbuildinfo",
-    "target": "es2020",
-    "lib": ["es2020"],
+    "target": "esnext",
+    "lib": ["esnext"],
     "module": "esnext",
     "moduleResolution": "bundler",
     "rootDir": "./",
@@ -19,6 +19,6 @@
     "verbatimModuleSyntax": true,
     "types": ["@cloudflare/workers-types/experimental"]
   },
-  "include": ["./**/*.ts", "../vite-env.d.ts"],
+  "include": ["./**/*.ts", "../vite-env.d.ts", "../env.d.ts"],
   "exclude": ["dist", "node_modules"]
 }
